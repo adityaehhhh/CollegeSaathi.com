@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+}
+
+/* Layout wrappers */
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 6rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-title {
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  font-size: 3rem;
+}
+
+.page-subtitle {
+  margin-top: 1rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  
+}
+
+@media (min-width: 640px) {
+  .page-title {
+    font-size: 4rem;
+  }
+  .page-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 6rem;
+  }
+  .page-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-title {
+    font-size: 8rem;
+  }
+  .page-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+.get-started-btn {
+  background-color: #facc15;
+  color: black;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 0 0 transparent;
+}
+
+.get-started-btn:hover {
+  box-shadow: 0 0 15px #facc15, 0 0 30px #facc15;
+  transform: translateY(-2px);
+}
+
+.scroll-indicator {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5px;
+}
+
+.wheel {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .get-started-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .scroll-indicator {
+    font-size: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .mouse {
+    width: 20px;
+    height: 36px;
+  }
+
+  .wheel {
+    width: 5px;
+    height: 5px;
+  }
+}
